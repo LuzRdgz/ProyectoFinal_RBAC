@@ -26,9 +26,9 @@ CREATE TABLE IF NOT EXISTS `movimientos` (
   `cantidad` int(11) DEFAULT NULL,
   `tipo` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Volcando datos para la tabla desarrollo2.movimientos: ~17 rows (aproximadamente)
+-- Volcando datos para la tabla desarrollo2.movimientos: ~19 rows (aproximadamente)
 INSERT INTO `movimientos` (`id`, `producto`, `cantidad`, `tipo`) VALUES
 	(1, 'Mouse', 25, 'Ingreso'),
 	(2, 'Teclado', 20, 'Ingreso'),
@@ -46,7 +46,9 @@ INSERT INTO `movimientos` (`id`, `producto`, `cantidad`, `tipo`) VALUES
 	(14, 'Patineta', 30, 'Ingreso'),
 	(15, 'Patines', 10, 'Ingreso'),
 	(16, 'Vitropiso', 2000, 'Ingreso'),
-	(17, 'Maquillaje', 2, 'Robo');
+	(17, 'Maquillaje', 2, 'Robo'),
+	(18, 'Spy x Family manga vol. 1', 5, 'Ingreso'),
+	(19, 'HxH manga vol.2', 3, 'Ingreso');
 
 -- Volcando estructura para tabla desarrollo2.productos
 CREATE TABLE IF NOT EXISTS `productos` (
@@ -54,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `productos` (
   `nombre` varchar(50) DEFAULT NULL,
   `precio` int(11) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Volcando datos para la tabla desarrollo2.productos: ~17 rows (aproximadamente)
 INSERT INTO `productos` (`ID`, `nombre`, `precio`) VALUES
@@ -83,14 +85,15 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `password` varchar(50) DEFAULT NULL,
   `permiso` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Volcando datos para la tabla desarrollo2.usuarios: ~4 rows (aproximadamente)
+-- Volcando datos para la tabla desarrollo2.usuarios: ~5 rows (aproximadamente)
 INSERT INTO `usuarios` (`id`, `user`, `password`, `permiso`) VALUES
 	(1, 'Admin', 'admin123', 'Administrador'),
 	(2, 'Joy', '123456', 'Edición'),
 	(3, 'Aelin', 'porquesi123', 'Solo lectura'),
-	(4, 'Tomoe', 'NanamiKamisama', 'Edición');
+	(4, 'Tomoe', 'NanamiKamisama', 'Edición'),
+	(5, 'Anya', 'peanuts', 'Edición');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
